@@ -13,7 +13,8 @@ module.exports = {
 				100: "#c5e4e7",
 				500: "#7f9c9f",
 				800: "#5e7a7d"
-			}
+			},
+			"white": "#ffffff"
 		},
 		extend: {},
 	},
