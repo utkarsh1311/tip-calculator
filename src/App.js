@@ -1,3 +1,5 @@
+import dollarIcon from "./assets/images/icon-dollar.svg";
+import personIcon from "./assets/images/icon-person.svg";
 const App = () => {
 	return (
 		<div className="bg-gray-cyan-100 h-full w-screen ">
@@ -17,9 +19,11 @@ const App = () => {
 						Bill
 					</label>
 					<div className="relative">
-						<p className="absolute left-4 top-2 text-gray-cyan-800">
-							$
-						</p>
+						<img
+							src={dollarIcon}
+							alt="dollar icon"
+							className="absolute left-4 top-4"
+						/>
 						<input
 							type="number"
 							className=" text-secondary bg-gray-cyan-50 m-1 py-1 px-3 rounded-md text-right focus:rounded-md focus:outline-2 focus:outline-primary"
@@ -58,6 +62,22 @@ const App = () => {
 							className="bg-gray-cyan-50 text-gray-cyan-800 focus:outline-2 focus:outline-primary rounded-md py-1 text-center"
 							placeholder="Custom"
 							type="number"
+						/>
+					</div>
+				</div>
+				<div>
+					<p className="text-base text-gray-cyan-800">
+						Number of People
+					</p>
+					<div className="relative">
+						<img
+							src={personIcon}
+							alt="person icon"
+							className="absolute top-4 left-4"
+						/>
+						<input
+							type="number"
+							className=" text-secondary bg-gray-cyan-50 m-1 py-1 px-3 rounded-md text-right focus:rounded-md focus:outline-2 focus:outline-primary"
 						/>
 					</div>
 				</div>
