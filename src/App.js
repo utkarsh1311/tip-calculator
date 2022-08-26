@@ -1,8 +1,11 @@
-import dollarIcon from "./assets/images/icon-dollar.svg";
-import personIcon from "./assets/images/icon-person.svg";
+import BillAmount from "./components/BillAmount";
+import NumberOfPeople from "./components/NumberOfPeople";
+import Results from "./components/Results";
+import TipPercent from "./components/TipPercent";
+
 const App = () => {
 	return (
-		<div className="bg-gray-cyan-100 h-full w-screen ">
+		<div className="bg-gray-cyan-100 text-2xl h-full w-screen font-space-mono">
 			<div className="h-[15%] py-14  flex flex-col justify-center text-center w-fit mx-auto ">
 				<h1 className="tracking-[10px] text-gray-cyan-800">
 					SPLI
@@ -10,102 +13,13 @@ const App = () => {
 					TTER
 				</h1>
 			</div>
-			<div className="h-fit flex flex-col gap-6 bg-white rounded-t-3xl p-8">
-				<div>
-					<label
-						htmlFor="bill-amount"
-						className="text-base text-gray-cyan-800"
-					>
-						Bill
-					</label>
-					<div className="relative">
-						<img
-							src={dollarIcon}
-							alt="dollar icon"
-							className="absolute left-4 top-4"
-						/>
-						<input
-							type="number"
-							className=" text-secondary bg-gray-cyan-50 m-1 py-1 px-3 rounded-md text-right focus:rounded-md focus:outline-2 focus:outline-primary"
-						/>
-					</div>
+			<div className="h-full justify-center gap-5 flex flex-col bg-white rounded-t-3xl p-8">
+				<div className="flex flex-col gap-5">
+					<BillAmount />
+					<TipPercent />
+					<NumberOfPeople />
 				</div>
-				<div>
-					<p className="text-base text-gray-cyan-800">Select tip %</p>
-					<div className="grid grid-cols-2 grid-rows-3 gap-4 my-2">
-						<input
-							className="bg-secondary active:bg-primary active:text-gray-cyan-800 text-gray-cyan-100 rounded-md py-1 "
-							value="5%"
-							type="button"
-						/>
-						<input
-							className="bg-secondary active:bg-primary active:text-gray-cyan-800 text-gray-cyan-100 rounded-md py-1 "
-							value="10%"
-							type="button"
-						/>
-						<input
-							className="bg-secondary active:bg-primary active:text-gray-cyan-800 text-gray-cyan-100 rounded-md py-1 "
-							value="15%"
-							type="button"
-						/>
-						<input
-							className="bg-secondary active:bg-primary active:text-gray-cyan-800 text-gray-cyan-100 rounded-md py-1 "
-							value="25%"
-							type="button"
-						/>
-						<input
-							className="bg-secondary active:bg-primary active:text-gray-cyan-800 text-gray-cyan-100 rounded-md py-1 "
-							value="50%"
-							type="button"
-						/>
-						<input
-							className="bg-gray-cyan-50 text-gray-cyan-800 focus:outline-2 focus:outline-primary rounded-md py-1 text-center"
-							placeholder="Custom"
-							type="number"
-						/>
-					</div>
-				</div>
-				<div>
-					<p className="text-base text-gray-cyan-800">
-						Number of People
-					</p>
-					<div className="relative">
-						<img
-							src={personIcon}
-							alt="person icon"
-							className="absolute top-4 left-4"
-						/>
-						<input
-							type="number"
-							className=" text-secondary bg-gray-cyan-50 m-1 py-1 px-3 rounded-md text-right focus:rounded-md focus:outline-2 focus:outline-primary"
-						/>
-					</div>
-				</div>
-				<div className="grid grid-rows-3 bg-secondary rounded-xl p-6 gap-6">
-					<div className="flex justify-between">
-						<div className="">
-							<p className="text-sm text-gray-cyan-50 ">
-								Tip amount
-							</p>
-							<p className="text-xs text-gray-cyan-500">
-								/ person
-							</p>
-						</div>
-						<p className="text-primary ">$4.27</p>
-					</div>
-					<div className="flex justify-between">
-						<div className="">
-							<p className="text-sm text-gray-cyan-50 ">Total</p>
-							<p className="text-xs text-gray-cyan-500">
-								/ person
-							</p>
-						</div>
-						<p className="text-primary ">$32.79</p>
-					</div>
-					<button className="bg-primary text-lg text-secondary rounded-md">
-						RESET
-					</button>
-				</div>
+				<Results />
 			</div>
 		</div>
 	);
