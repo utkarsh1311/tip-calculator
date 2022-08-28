@@ -2,7 +2,7 @@ const TipPercent = () => {
 	return (
 		<div className="">
 			<p className="text-base text-gray-cyan-800">Select tip %</p>
-			<div className="grid grid-cols-2 grid-rows-3 gap-4 my-2">
+			<div className="grid grid-cols-2 grid-rows-3 gap-4 my-2 lg:grid-cols-3 lg:grid-rows-2">
 				<input
 					className="tip-choice-btn"
 					value="5%"

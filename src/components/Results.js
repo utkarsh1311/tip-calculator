@@ -1,6 +1,6 @@
 const Results = () => {
 	return (
-		<div className=" grid grid-rows-3 bg-secondary rounded-xl p-6 gap-6 ">
+		<div className="grid grid-rows-3 bg-secondary rounded-xl p-6 gap-6">
 			<div className="flex justify-between">
 				<div className="">
 					<p className="text-sm text-gray-cyan-50 ">Tip amount</p>
